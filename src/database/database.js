@@ -18,4 +18,23 @@ export class Database {
   #persist() {
     fs.writeFile(DATABASE_PATH, JSON.stringify(this.#database));
   }
+
+  insert(table, data) {
+    if (Array.isArray(this.#database[table])) {
+      console.log("Já tem a Tabela");
+
+      this.#database[table].push(data);
+    } else {
+      console.log("Não tem a tabela");
+
+      this.#database[table] = [data];
+    }
+
+    this.#persist();
+  }
+
+  select(table) {
+    let data = this.#database[table] ?? [];
+    return data;
+  }
 }
