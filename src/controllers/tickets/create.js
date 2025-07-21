@@ -7,6 +7,9 @@ export function create({ request, response }) {
     id: randomUUID(),
     description,
     user_name,
+    status: "open",
+    created_at: new Date(),
+    updated_at: new Date(),
   };
 
   return response.end(JSON.stringify(ticket));
