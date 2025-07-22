@@ -5,6 +5,7 @@ export function create({ request, response, database }) {
 
   const ticket = {
     id: randomUUID(),
+    equipment,
     description,
     user_name,
     status: "open",
