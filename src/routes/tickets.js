@@ -1,5 +1,5 @@
 import { create } from "../controllers/tickets/create.js";
-import { select } from "../controllers/tickets/index.js";
+import { index } from "../controllers/tickets/index.js";
 
 export const tickets = [
   {
@@ -10,7 +10,7 @@ export const tickets = [
   {
     method: "GET",
     path: "/tickets",
-    controller: select,
+    controller: index,
   },
   {
     method: "PUT",

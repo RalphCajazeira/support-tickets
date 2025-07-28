@@ -1,1 +1,31 @@
-{"tickets":[{"id":"417ba98f-12c1-4af0-a260-9b6a0b9e8859","equipment":"Computador","description":"Não liga","user_name":"Ralph Ramos","status":"open","created_at":"2025-07-28T18:50:23.219Z","updated_at":"2025-07-28T18:50:23.219Z"}]}
+{
+  "tickets": [
+    {
+      "id": "417ba98f-12c1-4af0-a260-9b6a0b9e8859",
+      "equipment": "Computador",
+      "description": "Não liga",
+      "user_name": "Ralph Ramos",
+      "status": "open",
+      "created_at": "2025-07-28T18:50:23.219Z",
+      "updated_at": "2025-07-28T18:50:23.219Z"
+    },
+    {
+      "id": "42dff598-d6b7-4635-8554-a951e0d26b8e",
+      "equipment": "Mouse",
+      "description": "Parou",
+      "user_name": "Romário Romero",
+      "status": "open",
+      "created_at": "2025-07-28T19:12:44.118Z",
+      "updated_at": "2025-07-28T19:12:44.118Z"
+    },
+    {
+      "id": "e802a050-3724-4484-a6a7-cf01ca144e95",
+      "equipment": "Computador",
+      "description": "Não liga",
+      "user_name": "Ralph Ramos",
+      "status": "open",
+      "created_at": "2025-07-28T19:26:05.563Z",
+      "updated_at": "2025-07-28T19:26:05.563Z"
+    }
+  ]
+}

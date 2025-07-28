@@ -33,4 +33,6 @@ export class Database {
     let data = this.#database[table] ?? [];
     return data;
   }
+
+  update(table, id) {}
 }
