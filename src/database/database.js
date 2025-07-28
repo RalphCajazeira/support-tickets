@@ -29,10 +29,17 @@ export class Database {
     this.#persist();
   }
 
-  select(table) {
+  select(table, filters) {
     let data = this.#database[table] ?? [];
+
+    if (filters) {
+      data = data.filter((row) => {
+        const test = Object.entries(filters);
+        console.log(test);
+
+        return row;
+      });
+    }
     return data;
   }
-
-  update(table, id) {}
 }
