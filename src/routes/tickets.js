@@ -1,4 +1,5 @@
 import { create } from "../controllers/tickets/create.js";
+import { select } from "../controllers/tickets/index.js";
 
 export const tickets = [
   {
@@ -9,9 +10,7 @@ export const tickets = [
   {
     method: "GET",
     path: "/tickets",
-    controller: (request, response) => {
-      response.end("Lista de Tickets");
-    },
+    controller: select,
   },
   {
     method: "PUT",
