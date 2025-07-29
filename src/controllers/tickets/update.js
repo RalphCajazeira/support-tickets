@@ -12,8 +12,8 @@ export function update({ request, response, database }) {
   const ticket = database.update("tickets", id, data);
 
   if (!ticket) {
-    return response.writeHead(404).end("Ticket não encontrado");
+    return response.writeHead(404).end();
   }
 
-  return response.end(JSON.stringify(ticket));
+  return response.end();
 }

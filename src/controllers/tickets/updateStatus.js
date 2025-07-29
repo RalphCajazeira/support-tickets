@@ -5,7 +5,7 @@ export function updateStatus({ request, response, database }) {
   const ticket = database.update("tickets", id, { status: "closed", solution });
 
   if (!ticket) {
-    return response.writeHead(404).end("Ticket não encontrado");
+    return response.writeHead(404).end();
   }
-  return response.end(JSON.stringify(ticket));
+  return response.end();
 }
