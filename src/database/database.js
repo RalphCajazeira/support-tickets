@@ -35,10 +35,39 @@ export class Database {
     if (filters) {
       data = data.filter((row) => {
         return Object.entries(filters).some(([key, value]) => {
-          return row[key].toLowerCase().includes(value.toLowerCase());
+          return row[key].toLowerCase() === value.toLowerCase();
         });
       });
     }
     return data;
+  }
+
+  update(table, id, data) {
+    const rowIndex = this.#database[table].findIndex((row) => row.id === id);
+
+    if (rowIndex > -1) {
+      this.#database[table][rowIndex] = {
+        ...this.#database[table][rowIndex],
+        ...data,
+      };
+
+      this.#persist();
+      return this.#database[table][rowIndex];
+    }
+
+    return null;
+  }
+
+  remove(table, id) {
+    const rowIndex = this.#database[table].findIndex((row) => row.id === id);
+
+    if (rowIndex > -1) {
+      this.#database[table].splice(rowIndex, 1);
+
+      this.#persist();
+      return "Item Removido";
+    }
+
+    return null;
   }
 }
